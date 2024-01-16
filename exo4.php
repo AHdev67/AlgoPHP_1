@@ -6,7 +6,7 @@
 
 <?php
 
-$phrase= readline("Entrez une phrase: ");
+$phrase= "Engage le jeu que je le gagne";
 $phraseDisplay= $phrase;
 
 $phrase= str_replace(" ","",$phrase);
@@ -14,10 +14,10 @@ $phrase= strtolower($phrase);
 $phraseInverse= strrev($phrase);
 
 if ($phrase == $phraseInverse) {
-    echo "La phrase ",$phraseDisplay," est un palindrome.";
+    echo "La phrase « $phraseDisplay » est un palindrome.";
 }
 else {
-    echo "La phrase ",$phraseDisplay," n'est pas un palindrome.";
+    echo "La phrase « $phraseDisplay » n'est pas un palindrome.";
 }
 
 ?>
