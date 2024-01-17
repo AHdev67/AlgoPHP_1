@@ -8,18 +8,22 @@ affiche à un utilisateur un rendu de monnaie en nombre de billets de 10 € et 
 
 <?php
 
-$cout=152;
-$versement=200;
-$reste=$versement-$cout;
+$cout= 152;
+$versement= 200;
+$reste= $versement-$cout;
 
 echo"Le montant à payer est de : $cout <br>";
 echo "Le montant versé est de : $versement <br>";
 echo "Le reste est de : $reste <br>";
 
-//PAS FINI
-$renduB10=$reste/10;
-$renduB5=$reste/5;
+$renduB10= intdiv($reste,10);
+$reste= $reste - ($renduB10*10);
+$renduB5= intdiv($reste,5);
+$reste= $reste - ($renduB5*5);
+$renduP2= intdiv($reste,2);
+$reste= $reste - ($renduP2*2);
+$renduP1= $reste;
 
-echo(floor($renduB10)), " billets de 10 € - ",(floor($renduB5)), " Billets de 5 €";
+echo "$renduB10 billet(s) de 10 € - $renduB5 billet(s) de 5 € - $renduP2 pièce(s) de 2 € - $renduP1 pièce(s) de 1 €";
 
 ?>
