@@ -8,6 +8,8 @@
 <?php 
 
 $phrase = "Notre formation DL commence aujourd'hui";
+//Correction affichage
+echo"$phrase <br>";
 echo str_replace("aujourd'hui","demain",$phrase);
 
 ?>

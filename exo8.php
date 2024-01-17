@@ -9,16 +9,25 @@
 
 $table=8;
 
-//méthode 1
+//méthode for
 for($i = 1;$i <=10;$i++) {
     echo"$table x $i = ", $table*$i, "<br>";
 }
 
 echo "<br>";
 
-//méthode 2
+//méthode foreach
 foreach(range(1,10)as $iteration) {
     echo "$table x $iteration = ", $table*$iteration, "<br>";
+}
+
+echo "<br>";
+
+//méthode while
+$j=1;
+while($j<=10) {
+    echo "$table x $j =", $table*$j,"<br>";
+    $j++;
 }
 
 ?>

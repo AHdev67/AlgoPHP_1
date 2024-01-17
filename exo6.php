@@ -15,7 +15,8 @@ $facture= $nbArticles*$prixUnitaire * (1+$tauxTVA);
 
 echo"Prix unitaire de l'article : $prixUnitaire € <br>";
 echo "Quantité : $nbArticles <br>";
-echo "Taux de TVA : $tauxTVA <br>";
+//Correction pourcentage
+echo "Taux de TVA : ",$tauxTVA*100,"% <br>";
 echo "Le montant de la facture à régler est de : $facture €";
 
 ?>

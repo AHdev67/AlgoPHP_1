@@ -13,6 +13,8 @@ Si la catégorie n’est pas gérée, merci de le préciser.</p>
 
 $age=10;
 
+//Première version pas opti
+/*
 if($age>= 6 && $age<= 7){
     echo"L’enfant qui a $age ans appartient à la catégorie « Poussin »";
 }
@@ -24,6 +26,24 @@ elseif($age>= 10 && $age<= 11){
 }
 elseif($age>= 10 && $age<= 12){
     echo "L’enfant qui a $age ans appartient à la catégorie « Cadet »";
+}
+else {
+    echo "Catégorie Non gérée";
+}
+*/
+
+//version corrigée
+if($age>=12){
+    echo "L’enfant qui a $age ans appartient à la catégorie « Cadet »";
+}
+elseif($age<=11){
+    echo "L’enfant qui a $age ans appartient à la catégorie « Minime »";
+}
+elseif($age<= 9){
+    echo "L’enfant qui a $age ans appartient à la catégorie « Pupille »";
+}
+elseif($age<= 7){
+    echo"L’enfant qui a $age ans appartient à la catégorie « Poussin »";
 }
 else {
     echo "Catégorie Non gérée";
