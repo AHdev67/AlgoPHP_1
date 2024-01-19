@@ -8,6 +8,11 @@ Elle devra être affichée avec 2 décimales.
 
 <?php
 
+/*
+We calculate the average using the array_sum and count functions, nested within a round function to give us a result rounded to the 2nd decimal.
+Then we use a FOREACH loop to display the notes arrays.
+*/
+
 $notes=[
     10,
     12,

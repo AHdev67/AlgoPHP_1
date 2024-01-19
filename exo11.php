@@ -11,6 +11,11 @@ Exemple : tableau ➔ « Peugeot », « Renault », « BMW », « Mercedes »
 
 <?php
 
+/*
+We display the number of brands in the array with the .count function, then we display the brands array with a FOR loop,
+using the iteration variable to point to the next index. 
+*/
+
 $tabMarques= array(
     "Peugeot",
     "Renault",

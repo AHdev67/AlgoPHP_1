@@ -11,6 +11,11 @@ Si la catégorie n’est pas gérée, merci de le préciser.</p>
 
 <?php
 
+/*
+We determine the age category of the child with a series of IF conditions based on the max. age that fits within a category.
+We also take into account the possibility that the age does not fit in any categories.
+*/
+
 $age=10;
 
 //Première version pas opti

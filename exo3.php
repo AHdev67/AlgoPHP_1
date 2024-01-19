@@ -7,8 +7,10 @@
 
 <?php 
 
+//Using str_replace function to replace the word "aujourd'hui" by the word "demain" in the string $phrase.
+
 $phrase = "Notre formation DL commence aujourd'hui";
-//Correction affichage
+
 echo"$phrase <br>";
 echo str_replace("aujourd'hui","demain",$phrase);
 

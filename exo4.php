@@ -5,6 +5,14 @@
 <h2>Résultat</h2>
 
 <?php
+
+/*
+Using str_replace and strtolower functions to remove spaces and upper cases in the string $phrase, that we then store in a variable $phrasecomp.
+IF the string $phrasecomp is equal to $phrasecomp that we inverted using the strrev function, THEN it is a palindrome, ELSE it isn't.
+*/
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
 //Première version
 /*
 $phrase= "Engage le jeu que je le gagne";

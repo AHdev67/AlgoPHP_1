@@ -9,6 +9,11 @@ plus de 20 ans, alors celle-ci est imposable (sinon ce n’est pas le cas, « no
 
 <?php
 
+/*
+We determine wether or not a person is taxable with a double IF AND condition that takes into account the sex and age range for both sexes.
+Else we return that the person is not taxable.
+*/
+
 $age=32;
 $sexe='F';
 

@@ -8,6 +8,11 @@ affiche à un utilisateur un rendu de monnaie en nombre de billets de 10 € et 
 
 <?php
 
+/*
+We separate the leftover change in 10 euro bills using the intdiv function to give us an integer result for the division, then we use modulo to update the leftover
+and we move on to 5 euro bills, then 2 euro coins ...etc.
+*/
+
 $cout= 152;
 $versement= 200;
 $reste= $versement-$cout;

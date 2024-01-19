@@ -7,6 +7,8 @@ contenus dans celle-ci.</p>
 
 <?php 
 
+//Using str_word_count for counting the number of words in the string $phrase.
+
 $phrase = "Notre formation DL commence aujourd'hui";
 echo "La phrase « $phrase » contient ".str_word_count($phrase)." mots.";
 

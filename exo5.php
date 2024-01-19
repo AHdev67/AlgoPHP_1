@@ -7,8 +7,13 @@ Attention, la valeur générée devra être arrondie à 2 décimales.</p>
 
 <?php
 
+/*
+We calculate the equivalent in euros of a set amount of francs by multiplicating the value of one euro by the amount of francs,
+then we round up to the 2nd decimal with the .round function
+*/
+
 $montantFrancs=100;
-//Première version (pourquoi j'ai fait comme ça ?)
+//Première version (pourquoi j'ai fait comme ça ??)
 /*
 for($i= 1; $i<=$montantFrancs; $i++) {
     $montantEuros=$i*0.152449;

@@ -10,6 +10,12 @@ $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17") ; <br>
 
 <?php
 
+/*
+We create a Personne class, taking as attributes a name, surname, birth date and age.
+We include with the constructor, getter and setter, a function to calculate the age from the date of birth.
+We then create two objects of the Personne class, and display their names, surnames and age.
+*/
+
 Class Personne{
     private $_nom;
     private $_prenom;
@@ -35,8 +41,6 @@ Class Personne{
         return $this->_age->format("%Y");
     }
 }
-
-//echo "Age de la personne : ".$age->format("%Y ans %m mois %d jours"); */
 
 $p1 = new Personne("DUPONT", "Michel", "1980-02-19") ;
 echo $p1->getPrenom(). " ". $p1->getNom()."  a ". $p1->calcAge(). " ans. <br>";

@@ -10,20 +10,15 @@ Exemple : tableau ➔ Mickaël -> FRA, Virgile -> ESP, Marie-Claire -> ENG
 
 <?php
 
+/*
+We associate the right greeting with the names according to their language using a FOREACH loop containing a triple IF condition to check the language.
+*/
+
 $names= [
     "Mickael"=>"FRA",
     "Virgile"=>"ESP",
     "Marie-Claire"=> "ENG",
 ];
-
-/*$greet= [
-    "francais"=>"Salut",
-    "anglais"=>"Hello",
-    "espagnol"=>"Hola",
-];
-*/
-    /*echo"key ".$name. "<br>";
-    echo"value " .$value. "<br>";*/
 
 //version désorganisée
 foreach($names as $name=>$lang){
@@ -41,6 +36,7 @@ foreach($names as $name=>$lang){
     }
 }
 echo"<br>";
+
 //version organisée en ordre alphabetique
 ksort($names);
 foreach($names as $name=>$lang){
