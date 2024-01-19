@@ -16,6 +16,9 @@ echo"Le montant à payer est de : $cout <br>";
 echo "Le montant versé est de : $versement <br>";
 echo "Le reste est de : $reste <br>";
 
+//Méthode "Bac L"
+
+/*
 $renduB10= intdiv($reste,10);
 $reste= $reste - ($renduB10*10);
 $renduB5= intdiv($reste,5);
@@ -23,6 +26,18 @@ $reste= $reste - ($renduB5*5);
 $renduP2= intdiv($reste,2);
 $reste= $reste - ($renduP2*2);
 $renduP1= $reste;
+*/
+
+//Méthode modulo
+
+$renduB10= intdiv($reste,10);
+$reste= $reste%10;
+$renduB5= intdiv($reste,5);
+$reste= $reste%5;
+$renduP2= intdiv($reste,2);
+$reste= $reste%2;
+$renduP1= $reste;
+
 
 echo "$renduB10 billet(s) de 10 € - $renduB5 billet(s) de 5 € - $renduP2 pièce(s) de 2 € - $renduP1 pièce(s) de 1 €";
 
