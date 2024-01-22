@@ -16,35 +16,51 @@ We include with the constructor, getter and setter, a function to calculate the 
 We then create two objects of the Personne class, and display their names, surnames and age.
 */
 
-Class Personne{
-    private $_nom;
-    private $_prenom;
-    private $_birthdate;
-    private $_age;
+class Personne{
+    private string $_nom;
+    private string $_prenom;
+    private DateTime $_birthdate;
 
-    public function __construct($nom, $prenom, $birthdate){
+    public function __construct(string $nom,string $prenom, string $birthdate){
         $this->_nom = $nom;
         $this->_prenom = $prenom;
         $this->_birthdate = new DateTime($birthdate);
     }
 
-    public function getNom(){
+    public function getNom(): string{
         return $this->_nom;
     }
 
-    public function getPrenom(){
+    public function getPrenom(): string{
         return $this->_prenom;
     }
 
-    public function calcAge(){
-        $this->_age = date_diff(($this->_birthdate), new DateTime()); 
-        return $this->_age->format("%Y");
+    public function getBirthdate(): DateTime {
+        return $this->_birthdate;
+    }
+
+    public function setNom(string $nom) {
+        $this->_nom = $nom;
+    }
+    public function calcAge(): string{
+        $age = date_diff(($this->_birthdate), new DateTime()); 
+        return $age->format("%Y ans");
+    }
+
+    public function __toString() {
+        return $this->_prenom." ".$this->_nom." ".$this->calcAge()."<br>";
     }
 }
 
 $p1 = new Personne("DUPONT", "Michel", "1980-02-19") ;
-echo $p1->getPrenom(). " ". $p1->getNom()."  a ". $p1->calcAge(). " ans. <br>";
+echo $p1;
 
 $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17") ;
-echo $p2->getPrenom(). " ". $p2->getNom()."  a ". $p2->calcAge(). " ans. <br>";
+echo $p2;
+
+$p2->setNom($p1->getNom());
+
+echo $p2;
+
+
 ?>

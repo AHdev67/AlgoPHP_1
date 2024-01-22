@@ -18,7 +18,25 @@ $names= [
     "Mickael"=>"FRA",
     "Virgile"=>"ESP",
     "Marie-Claire"=> "ENG",
+    "Antoine" => "ITA"
 ];
+
+$salutations = [
+    "FRA" => "Salut",
+    "ESP" => "Hola",
+    "ENG" => "Hello",
+];
+
+
+foreach ($names as $prenom => $langue) {
+    //Avec la fonction in_array il faut préciser si on compare avec une clé ou une valeur 
+    if(in_array($langue, array_keys($salutations))) {
+        echo $salutations[$langue]." ".$prenom."<br>";
+    } else {
+        echo "Langue non gérée <br>";
+    }
+}
+echo"<br>";
 
 //version désorganisée
 foreach($names as $name=>$lang){

@@ -25,12 +25,20 @@ $tabMarques= array(
 
 echo"Il y a ".count( $tabMarques )." marques de voitures dans le tableau : <br>";
 
+//Méthode 1
+/*
 echo"<ul>";
-
 for ($i= 0; $i<count($tabMarques); $i++) {
     echo "<li> {$tabMarques[$i]} </li>";
 }
+echo"</ul>";
+*/
 
+//Méthode FOREACH préférable pour l'affichage de tableaux
+echo"<ul>";
+foreach ($tabMarques as $marque) {
+    echo "<li>$marque</li>";
+}
 echo"</ul>";
 
 ?>

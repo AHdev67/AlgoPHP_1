@@ -26,6 +26,7 @@ $notes=[
 ];
 
 $moyenne= round(array_sum($notes)/count($notes),2);
+echo implode($notes). "<br>";
 
 echo"Les notes obtenues par l’élève sont: ";
 foreach($notes as $note)
